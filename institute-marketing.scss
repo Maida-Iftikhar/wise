@@ -1,0 +1,751 @@
+@use "./main.scss" as *;
+
+$neutral-gray: #666666;
+$br500: 500px;
+
+$primary: #ff6833;
+$purple: #6e2bfa;
+$grey: #6b7280;
+$secondary: #0a0045;
+
+// Responsive
+$breakpoints: (
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px,
+);
+
+@mixin break($size) {
+	@media (min-width: map-get($breakpoints, $size)) {
+		@content;
+	}
+}
+
+%btn-primary {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: #ff5e24;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.6;
+	letter-spacing: 0.25px;
+	border-radius: 4px;
+	color: #fff;
+	padding: 10px 24px;
+	border: 1px solid transparent;
+
+	@include break(lg) {
+		padding: 10px 24px;
+	}
+}
+
+%btn-secondary {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.6;
+	letter-spacing: 0.25px;
+	color: $primary;
+	border-radius: 4px;
+	padding: 10px 24px;
+	border: 1px solid #ccc;
+
+	@include break(lg) {
+		padding: 10px 24px;
+	}
+}
+
+@mixin section-title {
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 1.14;
+	color: #000;
+
+	@include break(lg) {
+		font-size: 48px;
+		line-height: 56px;
+	}
+}
+
+body {
+	font-family: "Inter", sans-serif;
+	overflow-x: hidden;
+}
+
+// Extending container's gutter
+:root {
+	--bs-gutter-x: 1rem;
+}
+
+a {
+	text-decoration: none;
+}
+
+// Site Nav
+.site-nav {
+	padding: 1rem 0;
+	background: #fff;
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+	width: 100%;
+
+	@include break(lg) {
+		background: linear-gradient(
+			98.9deg,
+			#ffffff 2.25%,
+			rgba(255, 255, 255, 0.8) 98.74%
+		);
+		box-shadow: 0px 6px 28px rgba(0, 0, 0, 0.04);
+		backdrop-filter: blur(16px);
+	}
+
+	.site-nav-branding {
+		flex-shrink: 0;
+
+		.logo-mobile {
+			width: 32px;
+		}
+
+		.logo-desktop {
+			width: 120px;
+		}
+	}
+
+	.site-nav-links {
+		.create-institute-btn {
+			@extend %btn-primary;
+			line-height: 20px;
+			letter-spacing: 0.25px;
+		}
+
+		.request-demo-btn {
+			@extend %btn-secondary;
+			margin-left: 0.5rem;
+			line-height: 20px;
+			letter-spacing: 0.25px;
+		}
+	}
+}
+
+// Hero Section
+
+.hero-section {
+	padding: 150px 0 5.75rem;
+	position: relative;
+
+	@include break(lg) {
+		padding: 150px 0;
+	}
+
+	&::before {
+		content: url("../img/institute-marketing/arts/blue-dots.svg");
+		position: absolute;
+		left: 0;
+		bottom: -1rem;
+	}
+
+	&::after {
+		content: url("../img/institute-marketing/arts/purple-lines.svg");
+		position: absolute;
+		right: 0;
+		bottom: 0.5rem;
+	}
+
+	.hero-section-inner {
+		@include break(lg) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	.hero-section-content {
+		@include break(lg) {
+			flex-basis: 48%;
+		}
+
+		.headline {
+			@include section-title();
+
+			@include break(lg) {
+				font-size: 48px;
+				font-weight: 700;
+				line-height: 1.3;
+				margin-bottom: 1.5rem;
+			}
+		}
+
+		.intro {
+			font-size: 18px;
+			font-weight: 600;
+			line-height: 1.33;
+			color: $neutral-gray;
+
+			@include break(lg) {
+				font-family: Inter;
+				font-size: 18px;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 24px;
+				letter-spacing: 0px;
+				text-align: left;
+			}
+
+			span {
+				color: $primary;
+			}
+		}
+	}
+
+	.hero-section-art {
+		margin-top: 2rem;
+
+		@include break(lg) {
+			margin-top: 0;
+			flex-basis: 48%;
+
+			img {
+				position: relative;
+				z-index: 3;
+			}
+		}
+	}
+
+	.hero-section-buttons {
+		margin-top: 1.5rem;
+		display: flex;
+		.create-institute-btn {
+			@extend %btn-primary;
+			flex: 1;
+		}
+
+		.request-demo-btn {
+			@extend %btn-secondary;
+			flex: 1;
+			margin-left: 0.5rem;
+		}
+	}
+}
+
+// Trusted Companies
+.trusted-companies {
+	padding: 2rem 0;
+
+	@include break(lg) {
+		padding: 40px 0;
+	}
+
+	.section-title {
+		@include section-title();
+		margin-bottom: 3rem;
+	}
+
+	.companies-carousel {
+		.item {
+			width: 80px;
+			margin: 0 10px;
+
+			@include break(lg) {
+				width: 120px;
+			}
+		}
+	}
+}
+
+// Features List
+.features-list {
+	padding: 2rem 0;
+
+	.section-header {
+		@include break(lg) {
+			padding: 5rem 0 3rem;
+		}
+
+		.section-title {
+			@include section-title();
+
+			@include break(lg) {
+				max-width: 510px;
+				margin: 0 auto;
+			}
+		}
+
+		.section-intro {
+			font-size: 18px;
+			font-weight: 600;
+			line-height: 1.33;
+			color: $neutral-gray;
+			margin-top: 1.5rem;
+		}
+	}
+
+	//   Features grid
+	.features-grid {
+		margin-top: 2rem;
+
+		.feature-item {
+			padding: 2rem 0;
+
+			&.admins {
+				@include break(lg) {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+
+					.feature-item-content,
+					.feature-item-illustration {
+						flex-basis: 49%;
+					}
+				}
+				.feature-item-list {
+					--accent: #7c3aed;
+				}
+			}
+
+			&.teachers {
+				@include break(lg) {
+					display: flex;
+					flex-direction: row-reverse;
+					align-items: center;
+					justify-content: space-between;
+
+					.feature-item-content {
+						flex-basis: 44%;
+					}
+
+					.feature-item-illustration {
+						flex-basis: 49%;
+					}
+				}
+
+				.feature-item-list {
+					--accent: #fb8c00;
+				}
+			}
+
+			&.students-parents {
+				position: relative;
+
+				@include break(lg) {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+
+					.feature-item-content,
+					.feature-item-illustration {
+						flex-basis: 49%;
+					}
+				}
+
+				&::after {
+					content: url("../img/institute-marketing/arts/yellow-dots.svg");
+					z-index: -1;
+					position: absolute;
+					right: 0;
+					top: 5rem;
+					opacity: 0.5;
+					bottom: 0.5rem;
+				}
+				.feature-item-list {
+					--accent: #7c3aed;
+				}
+			}
+
+			.feature-item-title {
+				@include section-title();
+				margin-bottom: 18px;
+			}
+
+			.feature-item-list {
+				font-size: 1rem;
+				font-weight: 600;
+				line-height: 1.25;
+				color: $neutral-gray;
+				list-style: none;
+
+				li {
+					display: flex;
+
+					i {
+						display: inline-flex;
+						font-size: 1.25rem;
+						color: var(--accent);
+						margin-right: 10px;
+						flex-shrink: 0;
+					}
+				}
+
+				li + li {
+					margin-top: 10px;
+				}
+			}
+
+			.feature-item-illustration {
+				margin-top: 2.62rem;
+
+				img {
+					display: block;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+// Reviews
+.reviews {
+	padding: 2rem 0;
+	position: relative;
+
+	@include break(lg) {
+		padding: 160px 0;
+	}
+
+	&::before {
+		content: url("../img/institute-marketing/arts/red-dots.svg");
+		position: absolute;
+		left: 0;
+		top: 14rem;
+	}
+
+	.section-title {
+		@include section-title();
+		margin-bottom: 1rem;
+
+		@include break(lg) {
+			margin-bottom: 3rem;
+		}
+	}
+
+	.review-block {
+		background: #fff;
+		border: 1px solid #e6e6e6;
+		padding: 1.5rem;
+		border-radius: 1rem;
+
+		@include break(lg) {
+			margin: 0 15px;
+		}
+
+		.review_stars {
+			display: flex;
+		}
+
+		.review {
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 1.5;
+			color: #000;
+			margin-top: 1.15rem;
+		}
+
+		.reviewer {
+			margin-top: 1rem;
+
+			.reviewer_images {
+				flex-shrink: 0;
+				position: relative;
+				margin-right: 2rem;
+
+				.avatar {
+					--size: 64px;
+					height: var(--size);
+					width: var(--size);
+				}
+
+				.reviewer_emoji {
+					position: absolute;
+					--size: 32px;
+					height: var(--size);
+					width: var(--size);
+					background: #fff;
+					bottom: 0;
+					left: 45px;
+					border-radius: 50%;
+				}
+			}
+
+			.reviewer_details {
+				font-size: 16px;
+				font-weight: 600;
+				line-height: 1.5;
+				.name {
+					color: #000;
+				}
+
+				.pos {
+					color: $neutral-gray;
+				}
+			}
+		}
+	}
+}
+
+// Footer CTA
+.footer-cta {
+	padding: 2rem 0;
+	background: linear-gradient(180deg, #ffffff 0%, #fcfaff 100%);
+
+	@include break(lg) {
+		padding: 5rem 0;
+	}
+
+	.section-header {
+		.headline {
+			@include section-title();
+		}
+
+		.cta-desc {
+			font-size: 18px;
+			font-weight: 600;
+			line-height: 1.33;
+			color: $neutral-gray;
+
+			@include break(lg) {
+				font-size: 28px;
+			}
+		}
+	}
+
+	.footer-cta-links {
+		margin-top: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 24px;
+
+		@media (max-width: 500px) {
+			flex-direction: column;
+		}
+
+		.create-institute-btn {
+			@extend %btn-primary;
+			display: flex;
+			padding: 1.5rem 1rem;
+			max-width: 280px;
+
+			@include break(lg) {
+				font-size: 18px;
+			}
+
+			@media (max-width: 576px) {
+				width: 180px;
+			}
+		}
+
+		.request-demo-btn {
+			@extend %btn-secondary;
+			padding: 1.5rem 1rem;
+			max-width: 280px;
+
+			@include break(lg) {
+				font-size: 18px;
+			}
+
+			@media (max-width: 576px) {
+				width: 180px;
+			}
+		}
+	}
+}
+
+// Site Footer
+.site-footer {
+	padding: 2rem 0 3.5rem;
+	background: #fff;
+	position: relative;
+
+	@include break(lg) {
+		padding: 120px 0;
+	}
+
+	.section-header {
+		.section-title {
+			@include section-title();
+
+			@include break(lg) {
+				font-size: 48px;
+				font-weight: 700;
+				line-height: 56px;
+			}
+
+			span {
+				color: $purple;
+				display: block;
+			}
+		}
+
+		.section-desc {
+			margin-top: 1rem;
+			//styleName: 16/16 Med;
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 1.5;
+			color: #000;
+		}
+	}
+
+	.support-details {
+		margin-top: 1rem;
+
+		.support-title {
+			font-size: 18px;
+			font-weight: 600;
+			line-height: 1.7;
+			margin-bottom: 1rem;
+		}
+
+		.support-detail-item {
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 1.5;
+			color: #000;
+			display: flex;
+			align-items: center;
+
+			i {
+				color: $purple;
+				font-size: 1.45rem;
+				display: inline-block;
+				margin-right: 10px;
+			}
+
+			& + .support-detail-item {
+				margin-top: 1rem;
+			}
+		}
+	}
+
+	.support-form {
+		margin-top: 1rem;
+
+		.book_form {
+			box-shadow: 0 20px 72px rgba(0, 0, 0, 0.15);
+			z-index: 1;
+			border-radius: 12px;
+			position: relative;
+			background: #fff;
+			z-index: 1;
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: -3rem;
+				right: -2.5rem;
+				height: 100%;
+				width: 100%;
+				background: linear-gradient(
+					297.86deg,
+					rgba(123, 97, 255, 0) 0%,
+					rgba(123, 97, 255, 0.15) 101.83%
+				);
+				z-index: -1;
+
+				@media (max-width: 900px) {
+					display: none;
+				}
+			}
+
+			.form_top {
+				border-radius: 12px 12px 0 0;
+				background: linear-gradient(107.29deg, #843ae1 0%, #0081f7 100.05%);
+				padding: 24px;
+
+				span {
+					color: #fff;
+					font-size: 24px;
+					line-height: 32px;
+					font-weight: 600;
+
+					@media (max-width: $br500) {
+						font-size: 18px;
+						line-height: 24px;
+						font-weight: 700;
+					}
+				}
+			}
+
+			.form_bottom {
+				background-color: #fff;
+				padding: 1.5rem;
+				border-radius: 0 0 12px 12px;
+
+				.input-group {
+					margin-bottom: 1.5rem;
+
+					input {
+						border-radius: 4px;
+						min-height: 56px;
+
+						&::placeholder {
+							color: #666666;
+							font-size: 16px;
+							font-weight: 400;
+							line-height: 24px;
+						}
+
+						&[type="number"]::-webkit-inner-spin-button,
+						&[type="number"]::-webkit-outer-spin-button {
+							appearance: none;
+							margin: 0;
+						}
+					}
+				}
+
+				.mbtn {
+					@extend %btn-primary;
+					font-size: 14px;
+					font-weight: 600;
+					padding: 10px 50px;
+					line-height: 20px;
+
+					&:active {
+						outline: none;
+						transform: scale(0.98);
+					}
+				}
+
+				.book_note {
+					font-size: 12px;
+					font-weight: 500;
+					color: #2ea05b;
+					margin: 0;
+					visibility: hidden;
+					height: 0;
+				}
+			}
+		}
+	}
+}
+
+.copyright {
+	padding: 1.5rem 4rem;
+	position: relative;
+
+	&::before {
+		content: url("../img/institute-marketing/arts/footer-dots-left.svg");
+		position: absolute;
+		left: 0;
+		bottom: -14px;
+	}
+
+	&::after {
+		content: url("../img/institute-marketing/arts/footer-dots-right.png");
+		position: absolute;
+		right: 0;
+		bottom: -14px;
+	}
+
+	p {
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 1.33;
+		color: #000;
+	}
+}

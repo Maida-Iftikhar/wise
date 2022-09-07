@@ -1,0 +1,124 @@
+body {
+  background-color: #f0f0f0;
+  line-height: initial;
+}
+
+.downloadApp {
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #e3e3e3;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.02);
+  padding: 40px 30px 30px 30px;
+  max-width: 400px;
+  overflow: hidden;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  transition: box-shadow 300ms;
+  text-align: center;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transition: box-shadow 300ms;
+  -moz-transition: box-shadow 300ms;
+}
+@media only screen and (max-width: 600px) {
+  .downloadApp {
+    max-width: none;
+  }
+}
+.downloadApp:before, .downloadApp:after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 45%;
+  border-bottom-left-radius: 35%;
+  border-bottom-right-radius: 40%;
+  z-index: -1;
+}
+.downloadApp:before {
+  left: 40%;
+  bottom: -130%;
+  background-color: rgba(0, 0, 0, 0.03);
+  -webkit-animation: wawes 6s infinite linear;
+  animation: wawes 6s infinite linear;
+}
+.downloadApp:after {
+  left: 35%;
+  bottom: -125%;
+  background-color: rgba(0, 0, 0, 0.02);
+  -webkit-animation: wawes 7s infinite;
+  animation: wawes 7s infinite;
+}
+.downloadApp .logo-class {
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.downloadApp__title {
+  color: #202020;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+.downloadApp__web {
+  background: #000;
+  border-radius: 6px;
+  margin: 24px auto;
+  max-width: 175px;
+  width: 100%;
+}
+.downloadApp__web a {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  letter-spacing: 0.01em;
+  padding: 8px;
+  text-decoration: none;
+}
+.downloadApp__web span {
+  font-size: 12px;
+  margin-top: 2px;
+}
+.downloadApp__app {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.downloadApp__app li {
+  margin-right: 8px;
+  list-style-type: none;
+}
+.downloadApp__app li:only-child, .downloadApp__app li:last-child {
+  margin-right: 0;
+}
+.downloadApp__app img {
+  height: auto;
+  width: 100%;
+}
+
+@-webkit-keyframes wawes {
+  from {
+    -webkit-transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes wawes {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=download.css.map */

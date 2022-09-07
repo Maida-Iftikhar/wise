@@ -1,0 +1,523 @@
+@import 'variables';
+
+.hero{
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+
+  @media(max-width: $mobile){
+    padding: 40px 0;
+  }
+
+  .title{
+    @extend %headings-h2-40;
+    margin-bottom: 16px;
+
+    span{
+      color: $purple;
+    }
+
+    @media(max-width: $mobile){
+      font-size: 25px;
+      line-height: 36px;
+    }
+  }
+
+  .description{
+    @extend %regular-18;
+
+    @media(max-width: $mobile){
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .left-graphic{
+    position: absolute;
+    top: 30%;
+    left: 0;
+    z-index: -10;
+
+    @media(max-width: $tablet){
+      display: none;
+    }
+  }
+
+  .right-graphic{
+    position: absolute;
+    top: 20%;
+    right: 0;
+    z-index: -10;
+
+    @media(max-width: $tablet){
+      display: none;
+    }
+  }
+}
+
+.vision{
+  padding: 80px 0;
+
+  @media(max-width: $mobile){
+    padding: 40px 0;
+  }
+
+  .vision-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+
+    @media(max-width: $mobile){
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .line{
+      @media(max-width: $mobile){
+        display: none;
+      }
+    }
+
+    .mobile-line{
+      display: none;
+      @media(max-width: $mobile){
+        display: block;
+      }
+    }
+
+    .vision-goal{
+      text-align: right;
+
+      h3{
+        @extend %headings-h2-40;
+        margin-bottom: 8px;
+
+        @media(max-width: $mobile){
+          font-size: 25px;
+          line-height: 36px;
+        }
+      }
+
+      p{
+        @extend %regular-18;
+      }
+
+      @media(max-width: $mobile){
+        text-align: center;
+      }
+    }
+
+    .mission-goal{
+      h3{
+        @extend %headings-h2-40;
+        margin-bottom: 8px;
+
+        @media(max-width: $mobile){
+          font-size: 25px;
+          line-height: 36px;
+        }
+      }
+
+      p{
+        @extend %regular-18;
+      }
+
+      @media(max-width: $mobile){
+        text-align: center;
+      }
+    }
+  }
+}
+
+.founders{
+  padding: 80px 0;
+
+  @media(max-width: $mobile){
+    padding: 40px 0;
+  }
+
+  .title{
+    @extend %headings-h2-40;
+    margin-bottom: 80px;
+    text-align: center;
+
+    @media(max-width: $mobile){
+      font-size: 25px;
+      line-height: 36px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .founders-column{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 64px;
+
+    @media(max-width: $tablet){
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .quote{
+      position: absolute;
+      bottom: -40px;
+    }
+
+    @media(max-width: $mobile){
+      margin-bottom: 40px;
+    }
+
+    .image-card{
+      margin-bottom: 60px;
+      position: relative;
+
+      img{
+        max-width: 480px;
+        max-height: 480px;
+        border-radius: 16px;
+
+        @media(max-width: $tablet){
+          max-width: 100%;
+        }
+      }
+
+      .quote{
+        margin: 0 32px;
+        padding: 16px;
+        background-color: #fff;
+        box-shadow: 2px 9px 19px rgba(0, 0, 0, 0.04);
+        backdrop-filter: blur(8px);
+        border-radius: 8px;
+
+        @media(max-width: $mobile){
+          margin: 0 16px;
+        }
+
+        p{
+          @extend %semi-bold-18;
+          text-align: center;
+          margin-bottom: 0;
+          color: $purple;
+
+          @media(max-width: $mobile){
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+
+    .content{
+      h3{
+        @extend %semi-bold-28;
+        margin-bottom: 8px;
+
+        @media(max-width: $mobile){
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+      p{
+        @extend %regular-18;
+
+        @media(max-width: $mobile){
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+
+  .mubeen-column{
+    margin-bottom: 80px;
+  }
+}
+
+.investors{
+  padding: 80px 0;
+  text-align: center;
+  background: #F9FAFB;
+
+  @media(max-width: $mobile){
+    padding: 40px 0;
+  }
+
+  .title{
+    @extend %headings-h2-40;
+    margin-bottom: 8px;
+
+    @media(max-width: $mobile){
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+
+  .subtitle{
+    @extend %regular-18;
+    color: $grey;
+  }
+
+  .investors-list{
+    padding: 48px 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 36px;
+    flex-wrap: wrap;
+
+    @media(max-width: $mobile){
+      gap: 48px;
+    }
+
+    .investor{
+      width: 180px;
+
+      @media(max-width: $tablet){
+        width: 120px;
+      }
+
+      img{
+        width: 116px;
+        height: 116px;
+        margin-bottom: 8px
+      }
+
+      h6{
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        opacity: 0.8;
+        margin-bottom: 0;
+      }
+
+      p{
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        opacity: 0.8;
+        color: $grey;
+      }
+    }
+  }
+
+  .button{
+    @extend %medium-16;
+    color: $purple;
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+}
+
+.banner{
+  padding: 80px 0;
+  .banner-card{
+    position: relative;
+    padding: 80px;
+    border-radius: 24px;
+    background-color: #190551;
+    text-align: center;
+    background-image: url("/img/homepage/Countours.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media(max-width: $tablet){
+      padding: 44px 32px;
+    }
+
+    @media(max-width: $mobile){
+      padding: 34px 26px;
+    }
+
+    .title{
+      @extend %headings-h2-40;
+      color: #fff;
+      margin-bottom: 0;
+
+      @media(max-width: $mobile){
+        font-size: 28px;
+        line-height: 32px;
+      }
+    }
+
+    .subtitle{
+      @extend %medium-28;
+      color: #fff;
+      opacity: 0.5;
+      margin-bottom: 24px;
+
+      @media(max-width: $mobile){
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    .perks{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 24px;
+
+      @media(max-width: $mobile){
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .point{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+
+        p{
+          @extend %regular-18;
+          color: #fff;
+          margin-bottom: 0;
+
+          @media(max-width: $mobile){
+            font-size: 14px;
+            line-height: 21px;
+          }
+        }
+      }
+    }
+
+    button{
+      @extend %medium-16;
+      padding: 16px 24px;
+      color: $white;
+      background-color: $purple;
+      border-radius: 4px;
+      border: 1px solid $purple;
+
+      &:hover{
+        color: #fff;
+        background-color: #4411D4 ;
+        border-color: #4411D4;
+      }
+
+      &:active, &:focus{
+        outline: none;
+      }
+
+      @media(max-width: $mobile){
+        width: 100%;
+      }
+    }
+
+    .graphic{
+      position: absolute;
+      bottom: -20px;
+      right: -50px;
+      opacity: 0.5;
+
+      @media(max-width: 900px){
+        display: none;
+      }
+    }
+
+    .rotate {
+      animation: rotation 48s infinite linear;
+    }
+
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+  }
+}
+
+footer {
+  padding: 80px 0 20px;
+	position: relative;
+
+	.about{
+		font-size: 14px;
+		line-height: 28px;
+		font-weight: 400;
+		color: $grey;
+		margin-bottom: 32px;
+
+		@media(max-width: 500px){
+			max-width: 100%;
+		}
+	}
+
+  .logo {
+    margin-bottom: 30px;
+  }
+  p,
+  a {
+    font-size: 14px;
+    color: $grey;
+    line-height: 20px;
+    max-width: 80%;
+  }
+  .head {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $secondary;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .link {
+    a {
+      display: block;
+      margin-bottom: 12px;
+    }
+  }
+  img {
+    max-width: 117px;
+    margin-right: 10px;
+  }
+  .social {
+    margin-top: 30px;
+  }
+  .copyright {
+    font-size: 12px;
+		line-height: 16px;
+		font-weight: 600;
+    color: #999999;
+		margin-top: 70px;
+  }
+
+	@media(max-width: 500px){
+		padding: 40px 0 20px;
+	}
+
+	.left{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+
+	.center-left{
+		position: absolute;
+		left: 90px;
+		bottom: 0;
+		height: 35px;
+	}
+
+	.right{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+
+	.center-right{
+		position: absolute;
+		right: 90px;
+		bottom: 0;
+		height: 35px;
+	}
+}
+
+
