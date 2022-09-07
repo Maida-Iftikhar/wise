@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Wise App - Your Online Classroom</title>
+  <meta charset="utf-8" />
+  <meta name="google-site-verification" content="SJFv3avO30itjskUTPng14YHeU5sMggC9TQTnFqUS1Y" />
+  <meta name="description" content="Wise is an all-in-one solution for your online teaching business. We provide user-friendly features to host and manage all your live classes.">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.wise.live" />
+  <meta property="og:title" content="Wise - The #1 Live Teaching Platform" />
+  <meta property="og:site_name" content="WISE" />
+  <meta property="og:description"
+    content="Wise is an all-in-one solution for your online teaching business. We provide user-friendly features to host and manage all your live classes." />
+  <meta property="og:image" content="/img/og_logo.jpg" />
+  <link rel="icon" href="https://cdn.wiseapp.live/images/wise_favicon.png" type="image/jpeg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="https://use.typekit.net/sfk6hsd.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/homepage.css" />
+
+  <!-- Swiper Carousel -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="css/intlTelInput.css">
+  <script async src="js/tracking.js"></script>
+  <!-- Hotjar Tracking Code for https://web.wise.live -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+      h._hjSettings = { hjid: 2946202, hjsv: 6 };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script'); r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCMMF3P" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <section class="navigation">
+    <div class="zoom-banner">
+      <p>Looking to increase 🚀 engagement in your Zoom sessions? </p>
+      <a target="_blank" class="link" href="https://getlens.io">Click Here</a>
+    </div>
+
+    <div class="desktop-nav">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-2 logo">
+            <a href="/">
+              <img src="img/zoom-partners/wise_logo.svg" height="30" />
+            </a>
+          </div>
+          <div class="col-md-10">
+            <div class="menu">
+              <a href="/#" class="active" class="analytics-link" data-event="Home Link"> Home </a>
+              <a href="/pricing.html" class="analytics-link"> Pricing </a>
+              <a href="/about-us.html" class="analytics-link"> About Us </a>
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown04">
+                  <li><a class="dropdown-item" href="https://www.wise.live/blog/">Blogs</a></li>
+                  <li><a class="dropdown-item" href="https://wiseapp.notion.site/New-Features-8d1ed3b2ba1c464fa2d832a47aa5dc12">New Features</a></li>
+                  <li><a class="dropdown-item" href="https://wiseapp.notion.site/Wise-API-Documentation-a38e78c9a79d439ca7d13bae9d2d5582">API documentation</a></li>
+                </ul>
+              </li>
+              <a href="https://web.wise.live/login" class="primary analytics-link" data-event="Login Link"> Login </a>
+              <a href="/download" class="mbtn filled analytics-link" data-event="Get Started Button">
+                Start your free trial
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="mobile_navigation">
+      <div class="container">
+        <div class="mrow">
+          <div class="logo">
+            <a href="/">
+              <img src="https://cdn.wiseapp.live/images/wise_logo_full.png" />
+            </a>
+          </div>
+          <div class="menu">
+            <a href="https://web.wise.live/login" class="primary analytics-link" data-event="Login Link"> Login </a>
+            <div class="icon" data-toggle="false">
+              <div class="lines" onclick="open_menu()">
+                <div class="yellow"></div>
+                <div class="green"></div>
+                <div class="purple"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="mobile_drawer">
+      <div class="drawer">
+        <div class="links">
+          <div class="link">
+            <div class="name">
+              <a href="/" data-event="Home Link"> Home </a>
+            </div>
+          </div>
+          <div class="link">
+            <div class="name">
+              <a href="/pricing.html" class="analytics-link" onclick="open_menu()">Pricing</a>
+            </div>
+          </div>
+          <div class="link">
+            <div class="name">
+              <a href="/about-us.html" class="analytics-link" onclick="open_menu()">About Us</a>
+            </div>
+          </div>
+          <li class="nav-item dropdown link">
+            <a class="dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown04">
+              <li><a class="dropdown-item" href="https://www.wise.live/blog/">Blogs</a></li>
+              <li><a class="dropdown-item" href="https://wiseapp.notion.site/New-Features-8d1ed3b2ba1c464fa2d832a47aa5dc12">New Features</a></li>
+              <li><a class="dropdown-item" href="https://wiseapp.notion.site/Wise-API-Documentation-a38e78c9a79d439ca7d13bae9d2d5582">API documentation</a></li>
+            </ul>
+          </li>
+          <div class="link">
+            <a href="/download" class="mbtn filled analytics-link" data-event="Get Started Button">
+              Start your free trial
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero">
+    <div class="container">
+      <div class="text-container">
+        <h1 class="title gsap-entry">
+          The #1 software used by <br>
+          Online Teaching Businesses
+        </h1>
+        <h4 class="subtitle gsap-entry">
+          Schedule and manage live classes, collect payments, manage students and teachers <br>
+          All under your own brand
+        </h4>
+        <div class="gsap-entry button-group">
+          <a href="/download"><button class="mbtn filled">Start your free trial</button></a>
+          <a href="/book-demo.html"><button class="mbtn outlined">Book demo</button></a>
+        </div>
+      </div>
+      <div class="hero-image gsap-entry">
+        <img src="img/homepage/hero-image.png" alt="Hero Image">
+      </div>
+    </div>
+    <img class="star-graphic" src="img/homepage/star.webp" alt="Star vector">
+    <img class="polygon-graphic" src="img/homepage/polygon.webp" alt="Polygon vector">
+  </section>
+
+  <section class="insights">
+    <div>
+      <h4 class="title">
+        Trusted by institutions of all shapes and sizes across 80 countries
+      </h4>
+      <div class="slider">
+        <div class="slide-track">
+          <div class="slide">
+            <img class="zugzwang" src="img/homepage/zugzwang.png" alt="zugzwang">
+          </div>
+          <div class="slide">
+            <img class="sarva" src="img/homepage/sarva.png" alt="sarva">
+          </div>
+          <div class="slide">
+            <img class="dailylearn" src="img/homepage/dailylearn.png" alt="dailylearn">
+          </div>
+          <div class="slide">
+            <img class="dailylearn" src="img/homepage/vidyamandir.png" alt="vidyamandir">
+          </div>
+          <div class="slide">
+            <img class="dailylearn" src="img/homepage/citymall.png" alt="citymall">
+          </div>
+          <div class="slide">
+            <img class="dailylearn" src="img/homepage/bambinos.png" alt="bambinos">
+          </div>
+          <div class="slide">
+            <img class="networkkings" src="img/homepage/networkkings.png" alt="networkkings">
+          </div>
+          <div class="slide">
+            <img class="concept" src="img/homepage/concept.png" alt="concept">
+          </div>
+          <div class="slide">
+            <img class="freadom" src="img/homepage/freadom.png" alt="freadom">
+          </div>
+          <div class="slide">
+            <img class="curioed" src="img/homepage/curioed.png" alt="curioed">
+          </div>
+          <div class="slide">
+            <img class="learnq" src="img/homepage/learnq.png" alt="learnq">
+          </div>
+          <div class="slide">
+            <img class="chessGurukul" src="img/homepage/chessGurukul.png" alt="chessGurukul">
+          </div>
+          <div class="slide">
+            <img class="topbeat" src="img/homepage/topbeat.png" alt="topbeat">
+          </div>
+          <div class="slide">
+            <img class="yourPhysio" src="img/homepage/yourPhysio.png" alt="yourPhysio">
+          </div>
+          <div class="slide">
+            <img class="stocxpert" src="img/homepage/stocxpert.png" alt="stocxpert">
+          </div>
+          <div class="slide">
+            <img class="zugzwang" src="img/homepage/zugzwang.png" alt="zugzwang">
+          </div>
+          <div class="slide">
+            <img class="sarva" src="img/homepage/sarva.png" alt="sarva">
+          </div>
+          <div class="slide">
+            <img class="dailylearn" src="img/homepage/dailylearn.png" alt="dailylearn">
+          </div>
+          <div class="slide">
+            <img class="dailylearn" src="img/homepage/vidyamandir.png" alt="vidyamandir">
+          </div>
+          <div class="slide">
+            <img class="dailylearn" src="img/homepage/citymall.png" alt="citymall">
+          </div>
+          <div class="slide">
+            <img class="dailylearn" src="img/homepage/bambinos.png" alt="bambinos">
+          </div>
+          <div class="slide">
+            <img class="networkkings" src="img/homepage/networkkings.png" alt="networkkings">
+          </div>
+          <div class="slide">
+            <img class="concept" src="img/homepage/concept.png" alt="concept">
+          </div>
+          <div class="slide">
+            <img class="freadom" src="img/homepage/freadom.png" alt="freadom">
+          </div>
+          <div class="slide">
+            <img class="curioed" src="img/homepage/curioed.png" alt="curioed">
+          </div>
+          <div class="slide">
+            <img class="learnq" src="img/homepage/learnq.png" alt="learnq">
+          </div>
+          <div class="slide">
+            <img class="chessGurukul" src="img/homepage/chessGurukul.png" alt="chessGurukul">
+          </div>
+          <div class="slide">
+            <img class="topbeat" src="img/homepage/topbeat.png" alt="topbeat">
+          </div>
+          <div class="slide">
+            <img class="yourPhysio" src="img/homepage/yourPhysio.png" alt="yourPhysio">
+          </div>
+          <div class="slide">
+            <img class="stocxpert" src="img/homepage/stocxpert.png" alt="stocxpert">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="insights-list gsap-entry">
+          <div class="insights-list-item">
+            <h3>3 million+</h3>
+            <p>Teachers & students</p>
+          </div>
+          <div class="insights-list-item">
+            <h3>2 billion+</h3>
+            <p>Live class minutes</p>
+          </div>
+          <div class="insights-list-item">
+            <h3>250k+</h3>
+            <p>Quizzes and tests</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="outshine">
+    <div class="">
+      <h2 class="title">Everything you need to <br> <span>outshine your competitors</span></h2>
+    </div>
+    <img class="left-graphic" src="img/homepage/outshine-left.png" alt="Vector Graphic">
+    <img class="right-graphic" src="img/homepage/outshine-right.png" alt="Vector Graphic">
+  </section>
+
+  <section class="create">
+    <div class="container perk">
+      <div class="perk-content">
+        <p class="subtitle">CREATE</p>
+        <h4 class="title">Premium Live Sessions</h4>
+        <ul>
+          <li class="point">
+            <img loading="lazy" src="img/homepage/blue_check.svg" alt="Blue Check Vector">
+            <p>Native Zoom SDK integration - Branded environment</p>
+          </li>
+          <li class="point">
+            <img loading="lazy" src="img/homepage/blue_check.svg" alt="Blue Check Vector">
+            <p>Zoom business licenses for all instructors</p>
+          </li>
+          <li class="point">
+            <img loading="lazy" src="img/homepage/blue_check.svg" alt="Blue Check Vector">
+            <p>Automatic attendance</p>
+          </li>
+          <li class="point">
+            <img loading="lazy" src="img/homepage/blue_check.svg" alt="Blue Check Vector">
+            <p>Encrypted recordings for live sessions</p>
+          </li>
+          <li class="point">
+            <img loading="lazy" src="img/homepage/blue_check.svg" alt="Blue Check Vector">
+            <p>One click live class - no link sharing</p>
+          </li>
+        </ul>
+      </div>
+      <div class="perk-image">
+        <img src="img/homepage/live-session.png" alt="Live Session">
+      </div>
+    </div>
+    <img loading="lazy" class="left-graphic" src="img/homepage/left_blue_graphic.webp" alt="Vector Graphic">
+  </section>
+
+  <section class="manage">
+    <div class="container perk">
+      <div class="perk-image">
+        <img src="img/homepage/manage.png" alt="Live Session">
+      </div>
+      <div class="perk-content">
+        <p class="subtitle">MANAGE</p>
+        <h4 class="title">Analytics & Business Management</h4>
+        <ul>
+          <li class="point">
+            <img loading="lazy" src="img/homepage/purple_check.svg" alt="Purple Check Vector">
+            <p>Dashboard - Track instructor and learner engagement</p>
+          </li>
+          <li class="point">
+            <img loading="lazy" src="img/homepage/purple_check.svg" alt="Purple Check Vector">
+            <p>Automate processes for student cancellations</p>
+          </li>
+          <li class="point">
+            <img loading="lazy" src="img/homepage/purple_check.svg" alt="Purple Check Vector">
+            <p>Customized student & instructor activity reports</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="scale">
+    <div class="container perk">
+      <div class="perk-content">
+        <p class="subtitle">SCALE</p>
+        <h4 class="title">Sell & Earn on One Platform</h4>
+        <ul>
+          <li class="point">
+            <img loading="lazy" src="img/homepage/orange_check.svg" alt="Orange Check Vector">
+            <p>Craft automated and custom invoices</p>
+          </li>
+          <li class="point">
+            <img loading="lazy" src="img/homepage/orange_check.svg" alt="Orange Check Vector">
+            <p>Automate fee reminders and setup suspension rules</p>
+          </li>
+          <li class="point">
+            <img loading="lazy" src="img/homepage/orange_check.svg" alt="Orange Check Vector">
+            <p>Collect payments from anywhere in the world</p>
+          </li>
+          <li class="point">
+            <img loading="lazy" src="img/homepage/orange_check.svg" alt="Orange Check Vector">
+            <p>Sell pre-recorded courses</p>
+          </li>
+        </ul>
+      </div>
+      <div class="perk-image">
+        <img src="img/homepage/scale.png" alt="Live Session">
+      </div>
+    </div>
+    <img loading="lazy" class="right-graphic" src="img/homepage/right-orange-graphic.png" alt="Orange vector graphic">
+  </section>
+
+  <section class="grow">
+    <div class="container perk">
+      <div class="perk-image">
+        <img src="img/homepage/grow.png" alt="Live Session">
+      </div>
+      <div class="perk-content">
+        <p class="subtitle">GROW</p>
+        <h4 class="title">Your own branded experience</h4>
+        <ul>
+          <li class="point">
+            <img loading="lazy" src="img/homepage/green_check.svg" alt="Green Check Vector">
+            <p>Easy integration with your existing website</p>
+          </li>
+          <li class="point">
+            <img loading="lazy" src="img/homepage/green_check.svg" alt="Green Check Vector">
+            <p>Custom domain and white label android app</p>
+          </li>
+          <li class="point">
+            <img loading="lazy" src="img/homepage/green_check.svg" alt="Green Check Vector">
+            <p>Open APIs to design your own experience</p>
+          </li>
+          <li class="point">
+            <img loading="lazy" src="img/homepage/green_check.svg" alt="Green Check Vector">
+            <p>Bespoke landing pages for your brand</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="discover">
+    <div class="container">
+      <h2 class="title">Discover the power of Wise</h1>
+      <p class="subtitle">Deliver a seamless learning experience without juggling ten different apps for your operations</p>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="features-group">
+        <div class="features-list">
+          <h5 class="engage-feature">Engage</h5>
+          <ul class="engage-ul">
+            <li class="point">
+              <img loading="lazy" src="img/homepage/orange_check.svg" alt="Orange Check Vector">
+              <p>Immersive timeline</p>
+            </li>
+            <li class="point">
+              <img loading="lazy" src="img/homepage/orange_check.svg" alt="Orange Check Vector">
+              <p>Events and live streams</p>
+            </li>
+            <li class="point">
+              <img loading="lazy" src="img/homepage/orange_check.svg" alt="Orange Check Vector">
+              <p>Polls and Discussion</p>
+            </li>
+            <li class="point">
+              <img loading="lazy" src="img/homepage/orange_check.svg" alt="Orange Check Vector">
+              <p>Share rich media posts</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="features-list">
+          <h5 class="create-feature">Create</h5>
+          <ul class="create-ul">
+            <li class="point">
+              <img loading="lazy" src="img/homepage/blue_check.svg" alt="Blue Check Vector">
+              <p>Notices and broadcast messages</p>
+            </li>
+            <li class="point">
+              <img loading="lazy" src="img/homepage/blue_check.svg" alt="Blue Check Vector">
+              <p>Quizzes and Assignments</p>
+            </li>
+            <li class="point">
+              <img loading="lazy" src="img/homepage/blue_check.svg" alt="Blue Check Vector">
+              <p>Share PDF, links, and files</p>
+            </li>
+            <li class="point">
+              <img loading="lazy" src="img/homepage/blue_check.svg" alt="Blue Check Vector">
+              <p>CBSE / JEE / CUET pattern tests</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="features-list">
+          <h5 class="manage-feature">Manage</h5>
+          <ul class="manage-ul">
+            <li class="point">
+              <img loading="lazy" src="img/homepage/green_check.svg" alt="Green Check Vector">
+              <p>Invite teammates</p>
+            </li>
+            <li class="point">
+              <img loading="lazy" src="img/homepage/green_check.svg" alt="Green Check Vector">
+              <p>Roles and permission</p>
+            </li>
+            <li class="point">
+              <img loading="lazy" src="img/homepage/green_check.svg" alt="Green Check Vector">
+              <p>Instructor calendar management</p>
+            </li>
+            <li class="point">
+              <img loading="lazy" src="img/homepage/green_check.svg" alt="Green Check Vector">
+              <p>Embed to website</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <h3 class="title">
+        0% clutter. <span>100% growth.</span>
+      </h3>
+      <p class="subtitle">That’s why our clients <span>❤️</span> us</p>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <img src="img/homepage/double-quotes.svg" alt="Double Quotes">
+              <div class="testimonial-text">
+                <h6>
+                  I started teaching online with Wise. The potential in online teaching is huge for me. I was able to grow my revenue almost 16 times in the past 8 months. Their customer support is also top-notch, most features of Wise are unique
+                </h6>
+              </div>
+              <div class="testimonial-profile">
+                <p>Nawab Saquib Ibrahim <br> <span>Founder, Image Classes</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <img src="img/homepage/double-quotes.svg" alt="Double Quotes">
+              <div class="testimonial-text">
+                <h6>
+                  Wise is playing an important role in my business. I connect with my students & share materials without any fear of piracy. Live classes with automatic recording is wonderful. Having Zoom premium through Wise is very convenient for teachers
+                </h6>
+              </div>
+              <div class="testimonial-profile">
+                <p>Bledar Gjika, Maximus.al, Albania <br>
+                  <span>Italian language training institute</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <img src="img/homepage/double-quotes.svg" alt="Double Quotes">
+              <div class="testimonial-text">
+                <h6>
+                  Wise App has provided us with a variety of tools for analytics. Currently, Network Kings tracks the attendance and performance of a student effortlessly through Wise, making it easy for us to design and bolster our further assessments
+                </h6>
+              </div>
+              <div class="testimonial-profile">
+                <p>Atul Sharma <br> <span> Founder, Network Kings</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <img src="img/homepage/double-quotes.svg" alt="Double Quotes">
+              <div class="testimonial-text">
+                <h6>
+                  The modularity of the Wise platform, and the support from the Wise team has helped us scale SARVA very efficiently. The open APIs from the team and constant help on the backend has helped us integrate and switch over our backend seamlessly
+                </h6>
+              </div>
+              <div class="testimonial-profile">
+                <p>Labdhi Chopda <br> <span> Head of Growth, SARVA</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brands">
+    <div class="container">
+      <h2 class="title">As Seen on</h2>
+      <div class="brands-container">
+        <a rel="nofollow" target="_blank" href="https://inc42.com/buzz/wise-raises-5-mn-in-fresh-funding-to-help-educators-reach-out-to-global-audiences/">
+          <img loading="lazy" class="inc42" src="img/homepage/inc-42.png" alt="INC 42">
+        </a>
+        <a rel="nofollow" target="_blank" href="https://www.youtube.com/watch?v=tAbSq9KTZVk">
+          <img loading="lazy" class="ndtv" src="img/homepage/ndtv.png" alt="NDTV">
+        </a>
+        <a rel="nofollow" target="_blank" href="https://indianexpress.com/article/education/app-developed-by-two-iit-b-friends-helps-jk-students-beat-slow-internet-speeds-6585819/">
+          <img loading="lazy" class="indian-express" src="img/homepage/indian-express.png" alt="The Indian Express">
+        </a>
+        <a rel="nofollow" target="_blank" href="https://www.tribuneindia.com/news/reviews/story/minister-hails-iitians-for-developing-wise-app-126188">
+          <img loading="lazy" class="tribune" src="img/homepage/tribune.png" alt="The Tribune">
+        </a>
+      </div>
+    </div>
+      <img loading="lazy" class="left-graphic" src="img/homepage/left_purple_graphic.webp" alt="Vector Graphic">
+      <img loading="lazy" class="right-graphic" src="img/homepage/right_purple_graphic.webp" alt="Vector Graphic">
+  </section>
+
+  <section class="business">
+    <div class="container">
+      <h2 class="title">Upgrade your business</h2>
+      <p class="subtitle">Go Pro with Wise</p>
+
+      <div class="button-container">
+        <a href="/download"><button class="mbtn filled">Start your free trial</button></a>
+        <a href="/book-demo.html"><button class="mbtn outlined">Book demo</button></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="row align-items-start g-0">
+        <div class="col-12 col-sm-12 col-md-5 details">
+          <h2 class="heading">
+            Contact our team
+          </h2>
+          <p class="sub_heading">
+            We're happy to answer your queries and get you started on Wise.
+          </p>
+          <div class="contact_info">
+            <img loading="lazy" src="img/zoom-partners/contact/email.svg" alt="Email" />
+            <a target="_blank" href="mailto:sales@wiseapp.live">sales@wiseapp.live</a>
+          </div>
+          <div loading="lazy" class="contact_info">
+            <img src="img/zoom-partners/contact/phone.svg" alt="Phone" />
+            <a target="_blank" href="tel:+917831818181">+91 7831818181</a>
+          </div>
+          <div loading="lazy" class="contact_info">
+            <img src="img/zoom-partners/contact/twitter.svg" alt="Twitter" />
+            <a target="_blank" href="https://twitter.com/wiseapplive">@wiseapplive</a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-7 form">
+          <div style="z-index: 2">
+            <div class="input-container">
+              <div class="background"></div>
+              <div class="heading">
+                <h2>Have a question?</h2>
+              </div>
+              <form class="contact_form">
+                <div class="row gy-4 g-0 content">
+                  <div class="col-12 input">
+                    <input type="text" placeholder="Name*" id="name" name="name" required />
+                  </div>
+                  <div class="col-12 input">
+                    <input
+                      type="tel"
+                      onkeypress="isNumeric(event)"
+                      maxlength="15"
+                      placeholder="Phone number*"
+                      id="phone"
+                      name="phone"
+                      required
+                    />
+                  </div>
+                  <div class="col-12 input">
+                    <input type="text" placeholder="Email*" id="email" name="email" required />
+                  </div>
+                  <div class="col-12 input">
+                    <textarea required name="message" id="message" rows="4" placeholder="Please write your message*"></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button class="submit-button filled" data-event="book_demo">Contact Us</button>
+                  </div>
+                  <p class="message">
+                    Thank you for your interest. We will reach out to you shortly!
+                  </p>
+                </div>
+              </form>
+              <div class="form-terms-condition">
+                By continuing you agree to our <a href="/privacy-policy.html" target="_blank">Terms of Service</a> and <a href="/terms-and-conditions.html" target="_blank">Privacy Policy</a>. We'll contact you vial email, phone, or WhatsApp
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-3">
+          <img loading="lazy" src="https://cdn.wiseapp.live/images/wise_logo_full.png" class="logo" />
+          <p class="about">
+            Wise App is a one stop solution for online teaching. Wise allows teachers to schedule and conduct live classes with a single click of a button. Additionally, teachers can collect fees, send assignments, conduct tests, facilitate discussions and share study material.
+          </p>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <div class="head">important links</div>
+          <div class="link">
+            <a href="/#"  class="analytics-link" data-event="Footer Home Link">Home</a>
+            <a href="https://web.wise.live/" class="analytics-link" data-event="Footer Login Link">Login/Sign up</a>
+            <a href="/pricing.html" class="analytics-link" data-event="Pricing">Pricing</a>
+            <a href="/about-us.html" class="analytics-link"> About Us </a>
+            <a href="/faq.html" class="analytics-link" data-event="FAQ Link">FAQ's</a>
+            <a href="/terms-and-conditions.html" class="analytics-link" data-event="T&C Link">Terms & Conditions</a>
+            <a href="/privacy-policy.html" class="analytics-link" data-event="Privacy Link">Privacy Policy</a>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="head">CONNECT WITH US</div>
+          <div class="link">
+            <a href="tel:+917831818181" class="analytics-link" data-event="Footer Mobile Contact">+91 7831818181</a>
+            <a href="mailto:info@wiseapp.live" class="analytics-link" target="_blank" data-event="Footer Email Contact">info@wiseapp.live</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-3 mb-4">
+          <div class="head dwnld">Download our apps</div>
+          <div class="img">
+            <a rel="nofollow" href="https://play.google.com/store/apps/details?id=com.wise.app" target="_blank"
+              data-event="Footer Play Store" class="analytics-btn">
+              <img loading="lazy" src="/img/homepage/google-play.png" />
+            </a>
+            <a rel="nofollow" href="https://apps.apple.com/app/id1525875644" target="_blank" data-event="Footer App Store"
+              class="analytics-btn">
+              <img loading="lazy" src="/img/homepage/app-store.png" />
+            </a>
+          </div>
+          <div class="head social">We are social</div>
+          <a rel="nofollow" href="https://www.facebook.com/wiseapplive" target="_blank">
+            <img loading="lazy" src="/img/FB.svg" />
+          </a>
+          <a rel="nofollow" href="https://www.instagram.com/wiseapplive/" target="_blank">
+            <img loading="lazy" src="/img/Instagram.svg" />
+          </a>
+          <a rel="nofollow" href="https://twitter.com/wiseapplive" target="_blank">
+            <img loading="lazy" src="/img/Twitter (1).svg" />
+          </a>
+          <a rel="nofollow" href="https://www.linkedin.com/company/wiseapplive" target="_blank">
+            <img loading="lazy" src="/img/logo_linkedin.png" height="22" width="22" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="text-center copyright">
+        © 2022 Wise Leap Technologies Pvt Ltd. All Rights Reserved.
+      </div>
+    </div>
+    <img class="left" src="img/homepage/left-footer-graphic.png" alt="Footer Graphic">
+    <img class="center-left" src="img/homepage/center-footer-graphic.png" alt="Footer Graphic">
+    <img class="right" src="img/homepage/right-footer-graphic.png" alt="Footer Graphic">
+    <img class="center-right" src="img/homepage/center-footer-graphic.png" alt="Footer Graphic">
+  </footer>
+</body>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="./js/gsap.js"></script>
+<script src="./js/mobile_nav.js"></script>
+<script src="js/intl-tel-input-17.0.0/intlTelInput.js"></script>
+</html>
+
+<script>
+  const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  loop: true,
+  autoplay: {
+   delay: 5000,
+ },
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+});
+</script>
+
+<!-- Script for going to contact form -->
+<script>
+  function scrollToContactForm() {
+    let elem = document.getElementById("contact")
+    elem.scrollIntoView({ behavior: "smooth" })
+
+    const isInView = (el) => {
+      const box = el.getBoundingClientRect();
+      return box.top < window.innerHeight && box.bottom >= 0;
+    }
+
+    let buttonElem = document.querySelector('#contact .submit-button')
+    let interval = setInterval(() => {
+      if(isInView(buttonElem)){
+        document.querySelector('#contact #name').focus()
+        clearInterval(interval)
+      }
+    }, 100 )
+  }
+</script>
+
+<!-- Script for contact form -->
+<script>
+  function isNumeric(evt) {
+    var theEvent = evt || window.event;
+    var key = theEvent.keyCode || theEvent.which;
+    key = String.fromCharCode(key);
+    var regex = /[0-9]|\.|\+|\-/;
+    if (!regex.test(key)) {
+      theEvent.returnValue = false;
+      if (theEvent.preventDefault) theEvent.preventDefault();
+    }
+  }
+
+  var input = document.querySelector(".contact_form #phone");
+  let phoneInput = window.intlTelInput(input, {
+    initialCountry: "IN",
+    separateDialCode: true
+  });
+
+
+  document.querySelector(".contact_form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const { name, message, phone, email } = e.target.elements;
+    const queryParams = new URLSearchParams(location.search);
+    const res = await fetch("https://web.wise.live/api/v1/contact_us", {
+      method: "POST",
+      body: JSON.stringify({
+        contact_info: {
+          name: name.value,
+          message: message.value,
+          phone_number: "+" + phoneInput.selectedCountryData.dialCode + phone.value,
+          email: email.value,
+          category: "HOME",
+          utm: {
+            source: queryParams.get('utm_source'),
+            medium: queryParams.get('utm_medium'),
+            campaign: queryParams.get('utm_campaign'),
+          }
+        },
+      }),
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await res.json();
+    if (data.success) {
+      document.querySelector(".contact_form").reset();
+      document.querySelector(".message").style = `visibility: visible; height: auto;`;
+      setTimeout(() => {
+        document.querySelector(".message").style = `visibility: hidden; height: 0;`;
+      }, 5000);
+    }
+  });
+</script>
